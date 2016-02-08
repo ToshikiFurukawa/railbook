@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+
+development:
+  <<: *default
+  database: railbook_development​
+
+test:
+  <<: *default
+  database: railbook_test
+
+production:
+  <<: *default
+  database: railbook_production
